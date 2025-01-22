@@ -4,6 +4,8 @@ require('dotenv').config()
 require('./database/connection')
 app.use(express.json())
 
+const{multer, storage} = require('./middleware/multerConfig')
+
 const PORT = process.env.port
 
 app.get('/', (req, res)=>{
